@@ -1,0 +1,857 @@
+<!-- Elomus website project  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elomus - Single Product Shopify Theme</title>
+    <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAJGVYSWZJSSoACAAAAAEAPAECAAkAAAAaAAAAAAAAAGltYWdlcnk0AAAnPYy6AAAAh1BMVEVHcEx2o0KVv0eVv0eVv0eVv0eVv0eVv0dolz+Vv0eVv0eVv0dikj6Vv0eVv0eVv0eVv0dwnkF4pUJyoEF3pEKVv0eVv0dunEBrmkB5pkJ6p0P///9ejj6Vv0d5pkKcw1Pl79Kwz3Xy9+n5+/Six17K36Opy2q204G914zY57rE25je68br893jsdfGAAAAG3RSTlMAcKBwgPDgwPJAMGD+kCAQ0MA8r1dQsNbnH4ORBmA6AAABLklEQVR42nXRV5LCQAxF0XZOQ840z9nk/a9v5BKFZMD3V4cgtdH5AaIsNWPN5oHvAYhmI2ASpCnm2AbR73kCz4SRidwMm+PhB4gik2Fq3NAF8vhbTLEx2yjboi8/xY6zHAI/nHoBKAZUbHRpCE7AyUiujBWQ35i8J9VZAecN+LeLrrbW1gJWb4C+M42ph4CFnIgqeG7vAuIBuNOwKUvb/gA+qJJ+vgAKCDgNgLX2qdfUe0agGhJlOwSOBg9LNdcBWAy25CWuGux4PnsdselBUygQqy2p9tmLSoE/BhtQRS8U4NSWXVnh9gXW8palfdVqcNRn4G7QgPecg7rwW5VyatkT3KXrukouKXtOoRIge6bz30C/Z5L5UfgTOEaVeJMoUOBvv1qbr2aJ50bIZfgPrrtJackh8LAAAAAASUVORK5CYII="
+        type="image/x-icon">
+    <link rel="stylesheet" href="CSS styles/index.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- CSS Styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            /* text-align: center; */
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background: white;
+            box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.212);
+            text-align: center;
+            border-radius: 50%;
+            padding: 25px;
+            color: transparent;
+            transition: all 0.3s ease;
+
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: #21b3f1;
+        }
+
+        .swiper-button-next:hover .next {
+            color: white;
+        }
+
+        .next {
+            color: #21b3f1;
+            transform: translateX(12px);
+            font-size: 25px;
+        }
+
+        .swiper-button-prev:hover .prev {
+            color: white;
+        }
+
+        .prev {
+            color: #21b3f1;
+            transform: translateX(10px);
+            font-size: 25px;
+        }
+
+        @media(max-width:980px) {
+
+            .next,
+            .prev {
+                font-size: 15px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="dropdown">
+            <div class="hamburger">
+                <i class="bi bi-list"></i>
+                <div class="dropdown-content " data-aos="fade-up">
+                    <a href="">Home </a>
+                    <a href="">Shop </a>
+                    <a href="">Top Products </a>
+                    <a href="">Product Pages </a>
+                    <a href="">Pages/Layout </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="logo">
+
+            <a href=""> <img src="https://elomus-theme.myshopify.com/cdn/shop/files/logo-elomus.png?v=1613722537"
+                    alt=""></a>
+
+        </div>
+        <div class="links">
+            <div class="dropdown">
+                <li class="li-1"><a href="">Home <i class="bi bi-chevron-down"></i></a></li>
+                <div class="dropdown-content" data-aos="fade-up">
+                    <a href="">Home - Drone</a>
+                    <a href="">Home - Smartwatch</a>
+                    <a href="">Home - Stroller</a>
+                    <a href="">Home - Scotty</a>
+                    <a href="">Home - Beauty/Health</a>
+                    <a href="">Home - Jewellery</a>
+                    <a href="">Home - Shoes</a>
+                    <a href="">Home - BackPacks</a>
+                    <a href="">Home - HeadPhones</a>
+                    <a href="">Home - Bikes</a>
+                    <a href="">Home - Bags</a>
+                    <a href="">Home - Wallets</a>
+                    <a href="">Home - Drinks</a>
+                    <a href="">Home - Shaver</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li class="li-2"><a href="">Shop <i class="bi bi-chevron-down"></i></a></li>
+                <div class="dropdown-content">
+                    <a href="">Home - Drone</a>
+                    <a href="">Home - Smartwatch</a>
+                    <a href="">Home - Stroller</a>
+                    <a href="">Home - Scotty</a>
+                    <a href="">Home - Beauty/Health</a>
+                    <a href="">Home - Jewellery</a>
+                    <a href="">Home - Shoes</a>
+                    <a href="">Home - BackPacks</a>
+                    <a href="">Home - HeadPhones</a>
+                    <a href="">Home - Bikes</a>
+                    <a href="">Home - Bags</a>
+                    <a href="">Home - Wallets</a>
+                    <a href="">Home - Drinks</a>
+                    <a href="">Home - Shaver</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li class="li-3"><a href="">Top Products <i class="bi bi-chevron-down"></i></a></li>
+                <div class="dropdown-content">
+                    <a href="">Home - Drone</a>
+                    <a href="">Home - Smartwatch</a>
+                    <a href="">Home - Stroller</a>
+                    <a href="">Home - Scotty</a>
+                    <a href="">Home - Beauty/Health</a>
+                    <a href="">Home - Jewellery</a>
+                    <a href="">Home - Shoes</a>
+                    <a href="">Home - BackPacks</a>
+                    <a href="">Home - HeadPhones</a>
+                    <a href="">Home - Bikes</a>
+                    <a href="">Home - Bags</a>
+                    <a href="">Home - Wallets</a>
+                    <a href="">Home - Drinks</a>
+                    <a href="">Home - Shaver</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li class="li-4"><a href="">Product pages <i class="bi bi-chevron-down"></i></a></li>
+                <div class="dropdown-content">
+                    <a href="">Home - Drone</a>
+                    <a href="">Home - Smartwatch</a>
+                    <a href="">Home - Stroller</a>
+                    <a href="">Home - Scotty</a>
+                    <a href="">Home - Beauty/Health</a>
+                    <a href="">Home - Jewellery</a>
+                    <a href="">Home - Shoes</a>
+                    <a href="">Home - BackPacks</a>
+                    <a href="">Home - HeadPhones</a>
+                    <a href="">Home - Bikes</a>
+                    <a href="">Home - Bags</a>
+                    <a href="">Home - Wallets</a>
+                    <a href="">Home - Drinks</a>
+                    <a href="">Home - Shaver</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <li class="li-5"><a href="">Pages/Layouts <i class="bi bi-chevron-down"></i></a></li>
+                <div class="dropdown-content">
+                    <a href="">Home - Drone</a>
+                    <a href="">Home - Smartwatch</a>
+                    <a href="">Home - Stroller</a>
+                    <a href="">Home - Scotty</a>
+                    <a href="">Home - Beauty/Health</a>
+                    <a href="">Home - Jewellery</a>
+                    <a href="">Home - Shoes</a>
+                    <a href="">Home - BackPacks</a>
+                    <a href="">Home - HeadPhones</a>
+                    <a href="">Home - Bikes</a>
+                    <a href="">Home - Bags</a>
+                    <a href="">Home - Wallets</a>
+                    <a href="">Home - Drinks</a>
+                    <a href="">Home - Shaver</a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="btns">
+            <i class="bi bi-search"></i>
+            <i class="bi bi-cart4 cart-text"></i>
+            <i class="bi bi-gear"></i>
+            <i class="bi bi-globe-europe-africa"></i>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero">
+                        <div class="hero-text" data-aos="fade-up">
+                            <h4><span>____ </span> The world’s Smallest Quadcopter</h4>
+                            <h1>Elomus F18 Drone 3 Auto</h1>
+                            <p>Newest Hover Function, Elomus F18 Drone 3 Auto Quadcopter UFO with 2Mp Wifi Camera
+                            </p>
+                            <a href=""><button>Shop Now</button></a>
+                        </div>
+                        <div class="hero-space"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class=" hero hero-2">
+                        <div class="hero-text hero-2-text" data-aos="fade-up">
+                            <h4><span>____ </span> The world’s Smallest Quadcopter</h4>
+                            <h1>BuzzBee Nano Drone </h1>
+                            <p>
+                                Ideal for indoor usage & ultra portable. 3 User modes, junior, intermediate & healess.
+                            </p>
+                            <a href=""><button>Shop Now</button></a>
+                        </div>
+                        <div class="hero-space"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <i class="bi bi-chevron-right next"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="bi bi-chevron-left prev"></i>
+            </div>
+        </div>
+
+        <!-- End of Hero section -->
+
+
+        <div class="features" data-aos="fade-up">
+            <div class="features-text">
+                <h1>Experience</h1>
+                <h2>FLY IN THE SKY</h2>
+                <div class="line"></div>
+                <div class="line-2"></div>
+            </div>
+            <div class="features-content" data-aos="fade-up">
+                <div class="features-box">
+                    <img src="https://elomus-theme.myshopify.com/cdn/shop/files/drone_rotate_360.png?crop=center&height=56&v=1613722857&width=56"
+                        alt="">
+                    <h1>Immersive Field of View </h1>
+                    <p>Screen equivalent to 125” screen viewed from 10 feet with 24-bit true color (16 million colors)
+                    </p>
+                </div>
+                <div class="features-box">
+                    <img src="https://elomus-theme.myshopify.com/cdn/shop/files/hdmi_connect_b00a5bc7-e202-4b35-bf90-534e48ea97fd.png?crop=center&height=61&v=1613722857&width=61"
+                        alt="">
+                    <h1>USB & HDMI </h1>
+                    <p>Includes optional full immersion face mask. Supports HDMI industry standard 3D content</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://elomus-theme.myshopify.com/cdn/shop/files/high_battery_393941be-6fa4-48b5-bc37-dea5252fb748.png?crop=center&height=56&v=1613722857&width=56"
+                        alt="">
+                    <h1>Battery </h1>
+                    <p>Built-in batteries allow the pilot to participate in the sport for hours of racing.</p>
+                </div>
+                <div class="features-box">
+                    <img src="https://elomus-theme.myshopify.com/cdn/shop/files/return_back_if_error.png?crop=center&height=46&v=1613722857&width=67"
+                        alt="">
+                    <h1>Return to Home </h1>
+                    <p>tells the drone to automatically come back to you using GPS. It's a very useful convenient
+                        feature.</p>
+                </div>
+            </div>
+
+            <div class="features-image" data-aos="fade-up">
+                <img src="https://elomus-theme.myshopify.com/cdn/shop/files/img-static2-elomus1.jpg?v=1613722920"
+                    alt="">
+            </div>
+            <div class="features-image-text" data-aos="fade-up">
+                <h2>Buy Now Phantom 4 Professional offer an immersive, fun flying experience.</h2>
+                <a href=""><button>Shop Now</button></a>
+            </div>
+        </div>
+
+        <!-- End of features section -->
+
+        <div class="features-2">
+            <div class="features-2-text f-2-text" data-aos="fade-up">
+                <h1>Integrated PTZ camera Stabilizes every single pixel in the image</h1>
+                <p>PTZ camera includes a processor that calculates and compensates additional movements, and highly
+                    sensitive 3-axis gambal stabilizes up to 2000 vibrations per second, ± 0.02° accuracy.
+                </p>
+                <div class="features-2-grid " data-aos="fade-up">
+                    <div class="features-2-box">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/diameter_icon_924a3ad3-2b39-4cc3-9b88-aac5300194e8.png?v=1613722922"
+                            alt="Diameter">
+                        <div class="features-2-box-text">
+                            <h2>58 mm</h2>
+                            <p>Diameter</p>
+                        </div>
+                    </div>
+                    <div class="features-2-box">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/video_quality_icon_0316d479-1b9a-4475-93d7-d89ef194a887.png?v=1613722922"
+                            alt="quality">
+                        <div class="features-2-box-text">
+                            <h2>40 fps</h2>
+                            <p>4K Video</p>
+                        </div>
+                    </div>
+                    <div class="features-2-box">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/drone_weight_icon_71b6e908-27ba-4b11-9d88-e003ade5aad8.png?v=1613722922"
+                            alt="Weight">
+                        <div class="features-2-box-text">
+                            <h2>450 g</h2>
+                            <p>Weight</p>
+                        </div>
+                    </div>
+                    <a href=""><button><i class="bi bi-arrow-90deg-right" data-aos="fade-up"></i> View
+                            Product</button></a>
+                </div>
+            </div>
+            <div class="features-2-image" data-aos="fade-up">
+                <img src="https://elomus-theme.myshopify.com/cdn/shop/files/img-static3-elomus1.jpg?v=1613722921"
+                    alt="">
+            </div>
+        </div>
+
+        <!-- End of features-2 section -->
+
+
+        <div class="drone-chart">
+            <div class="label-1">
+                <div class="text-1" data-aos="fade-up">
+                    <h3>Robust Structure</h3>
+                    <p>Even after falling down, your drone will rise the phoenix.</p>
+                </div>
+                <div class="text-2" data-aos="fade-up">
+                    <h3>HD Video Recording</h3>
+                    <p>Get the drone with a spectacular 4k camera.</p>
+                </div>
+
+            </div>
+            <div class="label-image" data-aos="fade-up">
+                <img src="https://elomus-theme.myshopify.com/cdn/shop/files/img-static4-elomus1.jpg?v=1613722922"
+                    alt="">
+            </div>
+            <div class="label-2">
+                <div class="text-1" data-aos="fade-up">
+                    <h3>Simple Disassembly</h3>
+                    <p>Need a new detail? No problem at all!</p>
+                </div>
+                <div class="text-2" data-aos="fade-up">
+                    <h3>Advanced Technology</h3>
+                    <p>We offer only the latest technologies on the market</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Drone Chart -->
+
+        <div class="advert">
+            <div class="advert-text" data-aos="fade-up">
+                <p>Shop Our Store</p>
+                <p>Camera Drone Usa SellsTop Name Brand Drones</p>
+            </div>
+        </div>
+
+        <!-- End of advert -->
+
+        <div class="features featuresgrid">
+            <div class="features-text text-drone" data-aos="fade-up">
+                <h1>Featured products</h1>
+                <h2>DRONE PRODUCTS</h2>
+                <div class="line"></div>
+                <div class="line-2"></div>
+            </div>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="product-grid">
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-17%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/1-800x800.jpg?crop=center&height=600&v=1533648485&width=600"
+                                alt="">
+                            <h3>Acer Aspire Drone</h3>
+                            <p>$100.00 <span class="cross">$120.00</span> </p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-17%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/5-800x800_64d9faf7-62f6-45ac-97a5-061d28f6b24b.jpg?crop=center&height=600&v=1533648790&width=600"
+                                alt="">
+                            <h3>Acer Drone E15</h3>
+                            <p>$100.00 <span class="cross">$120.00</span></p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-17%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/4-800x800_7e36b37e-c5b5-4e6f-a941-5c03fa146f9e.jpg?crop=center&height=600&v=1533649108&width=600"
+                                alt="">
+                            <h3>Acer Drone VX15</h3>
+                            <p>$100.00 <span class="cross">$120.00</span></p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-33%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/8-800x800_fcb0d564-33d7-4b1e-be36-35f61d7b9f89.jpg?crop=center&height=600&v=1533649469&width=600"
+                                alt="">
+                            <h3>Drona De Multipurpose </h3>
+                            <p>$80.00 <span class="cross">$100.00</span></p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-grid">
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-17%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/5-800x800_64d9faf7-62f6-45ac-97a5-061d28f6b24b.jpg?crop=center&height=600&v=1533648790&width=600"
+                                alt="">
+                            <h3>Acer Drone E15</h3>
+                            <p>$100.00 <span class="cross">$120.00</span></p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-33%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/8-800x800_fcb0d564-33d7-4b1e-be36-35f61d7b9f89.jpg?crop=center&height=600&v=1533649469&width=600"
+                                alt="">
+                            <h3>Drona De Multipurpose </h3>
+                            <p>$80.00 <span class="cross">$100.00</span></p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-17%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/4-800x800_7e36b37e-c5b5-4e6f-a941-5c03fa146f9e.jpg?crop=center&height=600&v=1533649108&width=600"
+                                alt="">
+                            <h3>Acer Drone VX15</h3>
+                            <p>$100.00 <span class="cross">$120.00</span></p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+
+
+
+                        <div class="grid-box" data-aos="fade-up">
+                            <div class="tag">
+                                <p>-17%</p>
+                            </div>
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/products/6-800x800.jpg?crop=center&height=600&v=1533648494&width=600"
+                                alt="">
+                            <h3>Acer Aspire Drone</h3>
+                            <p>$100.00 <span class="cross">$120.00</span> </p>
+                            <a href=""><button>ADD TO CART</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <i class="bi bi-chevron-right next"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="bi bi-chevron-left prev"></i>
+            </div>
+        </div>
+
+
+        <!-- End of product-section -->
+
+        <div class="testimony">
+            <div class="testimony-text" data-aos="fade-up">
+                <h4>Welcome to my personal presentation</h4>
+                <h1>What our <span class="blue-text" data-aos="fade-up">Clients say</span></h1>
+                <div class="line"></div>
+                <div class="line-2"></div>
+            </div>
+
+            <div class="testimonies">
+                <div class="testimony-card" data-aos="fade-up">
+                    <img src="https://elomus-theme.myshopify.com/cdn/shop/files/testimor2-100x100.png?crop=center&height=100&v=1613722879&width=100"
+                        alt="">
+                    <h5> Trustworthy and powerful</h5>
+                    <p>Perfect Themes and the best of all that you have many options to choose! Best Support team
+                        ever!Very
+                        fast responding and experts on their fields! Thank you very much! ...</p>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    <p class="bold-p">Alva Ono</p>
+
+                </div>
+                <div class="testimony-card" data-aos="fade-up">
+                    <img src="https://elomus-theme.myshopify.com/cdn/shop/files/testimor3-100x100.png?crop=center&height=100&v=1613722879&width=100"
+                        alt="">
+                    <h5>Best designer around</h5>
+                    <p>Code, template and others are very good. The support has served me immediately and solved my
+                        problems
+                        when I need help. Are to be congratulated. Att Renan Andrade ...</p>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    <p class="bold-p">Amber Laha</p>
+
+                </div>
+                <div class="testimony-card" data-aos="fade-up">
+                    <img src="https://elomus-theme.myshopify.com/cdn/shop/files/testimor4-100x100.png?crop=center&height=100&v=1613722879&width=100"
+                        alt="">
+                    <h5> Trustworthy and powerful</h5>
+                    <p>Perfect Themes and the best of all that you have many options to choose! Best Support team
+                        ever!Very
+                        fast responding and experts on their fields! Thank you very much! ...</p>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                    <p class="bold-p">Dewey Tetzlaff</p>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="swiper mySwiper swiper-grid" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonies">
+                        <div class="testimony-card testimony-card-2" data-aos="fade-up">
+                            <img src="https://elomus-theme.myshopify.com/cdn/shop/files/testimor2-100x100.png?crop=center&height=100&v=1613722879&width=100"
+                                alt="">
+                            <h5> Trustworthy and powerful</h5>
+                            <p>Perfect Themes and the best of all that you have many options to choose! Best Support team
+                                ever!Very
+                                fast responding and experts on their fields! Thank you very much! ...</p>
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            <p class="bold-p">Alva Ono</p>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimony-card testimony-card-2" data-aos="fade-up">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/testimor3-100x100.png?crop=center&height=100&v=1613722879&width=100"
+                            alt="">
+                        <h5>Best designer around</h5>
+                        <p>Code, template and others are very good. The support has served me immediately and solved my
+                            problems
+                            when I need help. Are to be congratulated. Att Renan Andrade ...</p>
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        <p class="bold-p">Amber Laha</p>
+    
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimony-card testimony-card-2" data-aos="fade-up">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/testimor4-100x100.png?crop=center&height=100&v=1613722879&width=100"
+                            alt="">
+                        <h5> Trustworthy and powerful</h5>
+                        <p>Perfect Themes and the best of all that you have many options to choose! Best Support team
+                            ever!Very
+                            fast responding and experts on their fields! Thank you very much! ...</p>
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        <p class="bold-p">Dewey Tetzlaff</p>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <i class="bi bi-chevron-right next"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="bi bi-chevron-left prev"></i>
+            </div>
+        </div> -->
+
+        <!-- End of testimiony section -->
+
+        <div class="features-2">
+            <div class="features-2-text" data-aos="fade-up">
+                <h1>ULTRA-BRIGHT SCREEN</h1>
+                <p>A 5.5in 1080p screen integrated with the Phantom 4 Pro + offers 1000 cd/m2 of brightness, more than
+                    twice as bright as conventional smart devices. It makes bright, vivid colors easily visible in
+                    direct sunlight. As the DJI GO 4 app is built into the screen, a mobile device is not required,
+                    simplifying pre-flight preparations.</p>
+                <div class="features-3-grid">
+                    <div class="features-3-box" data-aos="fade-up">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/icon1_static6_26d96bf0-1781-4c3a-9f63-35a5c5c4764b.png?v=1613722925"
+                            alt="">
+                        <div class="box-3-text">
+                            <p>Flight time</p>
+                            <p>30 MINS</p>
+                        </div>
+                    </div>
+                    <div class="features-3-box" data-aos="fade-up">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/icon2_static6.png?v=1613722925"
+                            alt="">
+                        <div class="box-3-text">
+                            <p>Speed</p>
+                            <p>72 KM/H</p>
+                        </div>
+                    </div>
+                    <div class="features-3-box" data-aos="fade-up">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/icon3_static6.png?v=1613722925"
+                            alt="">
+                        <div class="box-3-text">
+                            <p>Control range</p>
+                            <p>7 KM</p>
+                        </div>
+                    </div>
+                    <div class="features-3-box" data-aos="fade-up">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/icon4_static6.png?v=1613722925"
+                            alt="">
+                        <div class="box-3-text">
+                            <p>Video resolution</p>
+                            <p>4K 60fps</p>
+                        </div>
+                    </div>
+                    <div class="features-3-box" data-aos="fade-up">
+                        <img src="https://elomus-theme.myshopify.com/cdn/shop/files/icon5_static6.png?v=1613722925"
+                            alt="">
+                        <div class="box-3-text">
+                            <p>Sensor range</p>
+                            <p>30 M</p>
+                        </div>
+                    </div>
+                    <div class="features-3-box" data-aos="fade-up">
+                        <img class="small-image"
+                            src="https://elomus-theme.myshopify.com/cdn/shop/files/icon6_static6.png?v=1613722926"
+                            alt="">
+                        <div class="box-3-text">
+                            <p>Obstacle sensing</p>
+                            <p>5 DIRECTIONS</p>
+                        </div>
+                    </div>
+                    <a href=""><button data-aos="fade-up"><i class="bi bi-arrow-90deg-right"></i> View
+                            Product</button></a>
+
+                </div>
+            </div>
+            <div class="features-2-image" data-aos="fade-up">
+                <img src="https://elomus-theme.myshopify.com/cdn/shop/files/img-static6-elomus1.jpg?v=1613722925"
+                    alt="">
+            </div>
+        </div>
+
+        <!-- End of features section -->
+
+        <div class="input-sec">
+            <div class="features-text" data-aos="fade-up">
+                <h1>Our news</h1>
+                <h2>SIGN UP FOR LATEST NEWS</h2>
+                <div class="line"></div>
+                <div class="line-2"></div>
+            </div>
+            <div class="inputs" data-aos="fade-up">
+                <input type="email" placeholder="Enter your email address here..."><a
+                    href=""><button>Subscribe</button></a></input>
+            </div>
+        </div>
+
+        <!-- End of Input section -->
+
+        <div class="contact-us-sec">
+            <div class="contact-us" data-aos="fade-up">
+                <h5>CONTACT US</h5>
+                <p>We are a team of designers and developers who creates high quality premium Shopify themes.</p>
+                <p>No 40 Baria Sreet 133/2, NewYork, USA.</p>
+                <p>(012) 800 456 789</p>
+                <p>support@masstechnologist</p>
+            </div>
+            <div class="main-menu" data-aos="fade-up">
+                <div class="lists">
+                    <h5>Main Menu</h5>
+                    <a href="">
+                        <p>Home</p>
+                    </a>
+                    <a href="">
+                        <p>Shop</p>
+                    </a>
+                    <a href="">
+                        <p>Top Products</p>
+                    </a>
+                    <a href="">
+                        <p>Product Pages</p>
+                    </a>
+                    <a href="">
+                        <p>Pages/Layouts</p>
+                    </a>
+                </div>
+
+            </div>
+            <div class="main-menu" data-aos="fade-up">
+                <div class="lists">
+                    <h5>Main Menu</h5>
+                    <a href="">
+                        <p>Home</p>
+                    </a>
+                    <a href="">
+                        <p>Shop</p>
+                    </a>
+                    <a href="">
+                        <p>Top Products</p>
+                    </a>
+                    <a href="">
+                        <p>Product Pages</p>
+                    </a>
+                    <a href="">
+                        <p>Pages/Layouts</p>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="main-menu-dropdown">
+                <div class="dropdown">
+                    <li class="menu-1">Main Menu<i class="bi bi-chevron-down"></i></li>
+                    <div class="dropdown-content" data-aos="fade-up">
+                        <a href="">Home </a>
+                        <a href="">Shop </a>
+                        <a href="">Top Products </a>
+                        <a href="">Product Pages </a>
+                        <a href="">Pages/Layouts </a>                       
+                </div>
+            <div class="main-menu-dropdown">
+                <div class="dropdown">
+                    <li class="menu-1">Main Menu<i class="bi bi-chevron-down"></i></li>
+                    <div class="dropdown-content" data-aos="fade-up">
+                        <a href="">Home </a>
+                        <a href="">Shop </a>
+                        <a href="">Top Products </a>
+                        <a href="">Product Pages </a>
+                        <a href="">Pages/Layouts </a>                       
+                </div>
+
+            </div> -->
+
+            <div class="pic-grid">
+                <div class="pic-box" data-aos="fade-up"><img
+                        src="https://scontent-lhr6-1.cdninstagram.com/v/t51.2885-15/37643928_253407618604292_4180348916815888384_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=18de74&_nc_ohc=FVuwg51cxH4Q7kNvgHW_OY1&_nc_ht=scontent-lhr6-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCcn66eyHNwYjq9OCIGTh9h7FqOoTIf4oV0xe0qKXqOoA&oe=66C27E2A"
+                        alt="">
+                </div>
+                <div class="pic-box" data-aos="fade-up">
+                    <img src="https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/37704530_218624648854397_7186921763131883520_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=EpObgyFxZsoQ7kNvgFB9g4L&_nc_ht=scontent-lhr8-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDKVJeQakqZPUwwgndx6RM7S-UoaLR8A0WXmuvhRhHqIQ&oe=66C28B99"
+                        alt="">
+                </div>
+                <div class="pic-box" data-aos="fade-up">
+                    <img src="https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/37856284_1909714175760253_1771405084517728256_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=YZzZCrD7EMsQ7kNvgHu5nge&_nc_ht=scontent-lhr8-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCPiGQ84uAJAYejJh6HC9gY5OwJjbjKUmrAimpWPFlaqQ&oe=66C26654"
+                        alt="">
+                </div>
+                <div class="pic-box" data-aos="fade-up">
+                    <img src="https://scontent-lhr8-2.cdninstagram.com/v/t51.2885-15/37561115_285753178857070_186069949041606656_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=n3F8XuM8fh4Q7kNvgEY-ZT-&_nc_ht=scontent-lhr8-2.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDXp05miAW3LfAkoaMxJzxceAwyA9_f6_fZS5_9piYN5w&oe=66C27BFA"
+                        alt="">
+                </div>
+                <div class="pic-box" data-aos="fade-up">
+                    <img src="https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/38081156_269900866929342_1224087927290593280_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=HAY5umzU1cIQ7kNvgFpqJUu&_nc_ht=scontent-lhr8-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAUy9MS42MLiJixzxnLWqpRzIq_xX3lR2bCeqcv3Qy0EQ&oe=66C26F01"
+                        alt="">
+                </div>
+                <div class="pic-box" data-aos="fade-up">
+                    <img src="https://scontent-lhr6-1.cdninstagram.com/v/t51.2885-15/37651529_270380266882011_964801017919045632_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=18de74&_nc_ohc=WUCaZ014UywQ7kNvgHxka0c&_nc_ht=scontent-lhr6-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBsYGMv1gNttoO8h9k_OgWw5uHXOCKkBIWQ_6gyGDWLzg&oe=66C26FC7"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Contact section -->
+
+        <div class="footer">
+            <div class="copywrite">
+                <p>Copyright © 2024/2025 Thonics.com. All rights reserved. <br>Built by Anthony Okpuruka</p>
+            </div>
+            <div class="pay">
+                <i class="bi bi-credit-card"></i>
+                <i class="bi bi-credit-card"></i>
+                <i class="bi bi-credit-card"></i>
+                <i class="bi bi-paypal"></i>
+
+            </div>
+            <div class="socials">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-google"></i>
+                <i class="bi bi-instagram"></i>
+            </div>
+        </div>
+
+        <!-- End of footer -->
+
+
+    </div>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
